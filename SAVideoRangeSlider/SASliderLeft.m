@@ -45,16 +45,11 @@
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    //// Color Declarations
-    UIColor* color5 = [UIColor colorWithRed: 0.992 green: 0.902 blue: 0.004 alpha: 1];
-    UIColor* gradientColor2 = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
-    UIColor* color6 = [UIColor colorWithRed: 0.196 green: 0.161 blue: 0.047 alpha: 1];
-    
     //// Gradient Declarations
     NSArray* gradient3Colors = [NSArray arrayWithObjects:
-                                (id)gradientColor2.CGColor,
-                                (id)[UIColor colorWithRed: 0.996 green: 0.951 blue: 0.502 alpha: 1].CGColor,
-                                (id)color5.CGColor, nil];
+                                (id)[UIColor whiteColor].CGColor,
+                                (id)[UIColor whiteColor].CGColor,
+                                (id)[UIColor whiteColor].CGColor, nil];
     CGFloat gradient3Locations[] = {0, 0, 0.49};
     CGGradientRef gradient3 = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)gradient3Colors, gradient3Locations);
     
@@ -88,7 +83,7 @@
     [bezier3Path closePath];
     bezier3Path.miterLimit = 19;
     
-    [color6 setFill];
+    [[UIColor blackColor] setFill];
     [bezier3Path fill];
     
     
@@ -102,7 +97,7 @@
     [bezierPath closePath];
     bezierPath.miterLimit = 19;
     
-    [color6 setFill];
+    [[UIColor blackColor] setFill];
     [bezierPath fill];
     
     
